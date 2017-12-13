@@ -1,0 +1,4 @@
+exit code in case of error set to 1 instead of -1.
+take care if GIT changed LF to CRLF while pushing and turn it back before testing.
+
+-SA
