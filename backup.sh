@@ -16,7 +16,10 @@ do
 			local var2=$2/$line
 			if [ "$var1" -nt "$var2" ]
 				then
+				local myfile="$var1"
+				pretime=$(stat -c %y "$myfile")
 				cp -fup $var1 $2
+				touch -d "$pretime" "$var2"
 				echo ` echo $var1 | cut -d '/' -f 1 --complement `
 			fi
 		else
