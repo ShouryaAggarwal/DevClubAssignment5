@@ -6,7 +6,7 @@ if [ "$#" -ne 2 ] || ! [ -r "$1" ]; then
 fi
 
 size1=` grep ".*:.*:.*:.*:.*:.*:.*" $1 | wc -l ` 
-size2=` cat $1 | wc -l `
+size2=` grep . $1 | wc -l `
 
 if [ $size1 -eq $size2 ]
 then
